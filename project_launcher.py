@@ -7,11 +7,11 @@ from pathlib import Path
 
 # --- Configurable paths ---
 PROJECTS_DIR = os.path.expanduser('~/Desktop/Personal/Projects/')
-LAST_PROJECT_FILE = os.path.join(PROJECTS_DIR, 'last_project.txt')
+LAST_PROJECT_FILE = os.path.join(PROJECTS_DIR, 'initiatorScript/last_project.txt')
 
 # --- Helper functions ---
 def get_username():
-    return os.environ.get('USER').capitalize() or os.environ.get('USERNAME').capitalize() or 'Yaniv'
+    return os.environ.get('USER').capitalize() or os.environ.get('USERNAME').capitalize()
 
 def get_greeting():
     now = datetime.datetime.now().hour
