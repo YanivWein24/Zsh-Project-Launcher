@@ -1,0 +1,20 @@
+Add these at the bottom of your ~/.zprofile file:
+
+if [[ -z "$PROJECT_LAUNCHER_RAN" && $- == *i* ]]; then
+  export PROJECT_LAUNCHER_RAN=true
+  project_launcher
+fi
+
+function project_launcher() {
+  python3 ~/Desktop/Personal/Projects/initiatorScript/project_launcher.py
+  if [ $? -eq 99 ]; then
+    # These lines will be executed on exit:
+    echo 'Keep In Coding! 👨🏻‍💻'
+    cd ~/Desktop
+  fi
+}
+
+# Run the launcher at startup if this is an interactive shell
+if [[ $- == *i* ]]; then
+  project_launcher
+fi
