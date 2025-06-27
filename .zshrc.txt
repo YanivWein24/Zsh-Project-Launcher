@@ -1,0 +1,5 @@
+Add these lines to the bottom of your ~/.zshrc file:
+
+if [[ $- == *i* ]]; then
+  python3 ~/PROJECTS_DIR/project_launcher.py
+fi
