@@ -40,6 +40,19 @@ cd Zsh_Project_Launcher
 pip install -r requirements.txt
 ```
 
+> **Note:**
+> Since Python 3.13.5, installing Python libraries globally with `pip` is not supported by default. It is recommended to use a [virtual environment (venv)](https://docs.python.org/3/library/venv.html) to manage your dependencies locally for this project.
+>
+> To create and activate a virtual environment:
+>
+> ```sh
+> python3 -m venv venv
+> source venv/bin/activate
+> pip install -r requirements.txt
+> ```
+>
+> This ensures the `rich` library and other dependencies are installed in your project environment.
+
 ### 3. Configure Your Projects Directory
 
 Edit the `PROJECTS_DIR` variable in `project_launcher.py` to point to your projects folder:
